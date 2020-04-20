@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  if !data
+    p No stores saved
+  else
+    table
+      thead  
+          tr
+              th StoreNumber
+              th StoreName
+      tbody
+          each val in data
+              tr
+                  td= val.StoreNumber
+                  td= val.StoreName
+

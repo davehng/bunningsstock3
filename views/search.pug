@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1= title
+  if data.item_id
+    p Searching for item Id: #{data.item_id}
+  if message
+    p #{message}
+  if data.results.length > 0
+    table
+        thead  
+            tr
+                th Store
+                th Status
+                th Aisle
+                th Stock Count
+        tbody
+            each val in data.results
+                tr
+                    td= val.StoreName
+                    td= val.Status
+                    td= val.Aisle
+                    td= val.StockCount
+

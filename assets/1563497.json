@@ -1,0 +1,342 @@
+[
+  {
+    "StoreNumber": "2157",
+    "StoreDistance": 2.7637697772455918,
+    "StoreDistanceMeasurementUnit": "km",
+    "StoreInfo": {
+      "StoreNumber": 0,
+      "StoreName": "Melville",
+      "Phone": "(08) 9329 1300",
+      "Address": "126 North Lake Rd",
+      "AddressLineTwo": "",
+      "Suburb": "Melville",
+      "Postcode": "6156",
+      "State": "WA",
+      "Distance": 2.7637697772455918,
+      "DistanceMeasurementUnit": "km",
+      "CurrentTradingHours": {
+        "Date": "2020-04-20T00:00:00",
+        "Name": "Today",
+        "IsOpen": true,
+        "OpeningTime": "7:00am",
+        "ClosingTime": "7:00pm",
+        "WeekdayName": "Today"
+      }
+    },
+    "StockStatus": [
+      {
+        "ItemNumber": "1563497",
+        "Code": 1,
+        "Message": "Out of stock",
+        "StockCount": 0
+      }
+    ],
+    "StoreAisleData": { "Success": true, "Response": "19" }
+  },
+  {
+    "StoreNumber": "2015",
+    "StoreDistance": 4.20297851657762,
+    "StoreDistanceMeasurementUnit": "km",
+    "StoreInfo": {
+      "StoreNumber": 0,
+      "StoreName": "Bibra Lake",
+      "Phone": "(08) 9494 0400",
+      "Address": "Corner Spearwood Avenue & Stock Road",
+      "AddressLineTwo": "",
+      "Suburb": "Bibra Lake",
+      "Postcode": "6163",
+      "State": "WA",
+      "Distance": 4.20297851657762,
+      "DistanceMeasurementUnit": "km",
+      "CurrentTradingHours": {
+        "Date": "2020-04-20T00:00:00",
+        "Name": "Today",
+        "IsOpen": true,
+        "OpeningTime": "7:00am",
+        "ClosingTime": "7:00pm",
+        "WeekdayName": "Today"
+      }
+    },
+    "StockStatus": [
+      {
+        "ItemNumber": "1563497",
+        "Code": 3,
+        "Message": "In stock",
+        "StockCount": 3
+      }
+    ],
+    "StoreAisleData": { "Success": true, "Response": "12" }
+  },
+  {
+    "StoreNumber": "2206",
+    "StoreDistance": 8.3605330252696284,
+    "StoreDistanceMeasurementUnit": "km",
+    "StoreInfo": {
+      "StoreNumber": 0,
+      "StoreName": "Willetton",
+      "Phone": "(08) 9259 2800",
+      "Address": "135 High Road",
+      "AddressLineTwo": "",
+      "Suburb": "Willetton",
+      "Postcode": "6155",
+      "State": "WA",
+      "Distance": 8.3605330252696284,
+      "DistanceMeasurementUnit": "km",
+      "CurrentTradingHours": {
+        "Date": "2020-04-20T00:00:00",
+        "Name": "Today",
+        "IsOpen": true,
+        "OpeningTime": "7:00am",
+        "ClosingTime": "7:00pm",
+        "WeekdayName": "Today"
+      }
+    },
+    "StockStatus": [
+      {
+        "ItemNumber": "1563497",
+        "Code": 1,
+        "Message": "Out of stock",
+        "StockCount": 0
+      }
+    ],
+    "StoreAisleData": { "Success": true, "Response": "6" }
+  },
+  {
+    "StoreNumber": "2433",
+    "StoreDistance": 9.1507777576726035,
+    "StoreDistanceMeasurementUnit": "km",
+    "StoreInfo": {
+      "StoreNumber": 0,
+      "StoreName": "Claremont",
+      "Phone": "(08) 9235 2700",
+      "Address": "303 Stirling Highway",
+      "AddressLineTwo": "",
+      "Suburb": "Claremont",
+      "Postcode": "6010",
+      "State": "WA",
+      "Distance": 9.1507777576726035,
+      "DistanceMeasurementUnit": "km",
+      "CurrentTradingHours": {
+        "Date": "2020-04-20T00:00:00",
+        "Name": "Today",
+        "IsOpen": true,
+        "OpeningTime": "7:00am",
+        "ClosingTime": "7:00pm",
+        "WeekdayName": "Today"
+      }
+    },
+    "StockStatus": [
+      {
+        "ItemNumber": "1563497",
+        "Code": 1,
+        "Message": "Out of stock",
+        "StockCount": 0
+      }
+    ],
+    "StoreAisleData": { "Success": true, "Response": "26" }
+  },
+  {
+    "StoreNumber": "2160",
+    "StoreDistance": 9.720594218189369,
+    "StoreDistanceMeasurementUnit": "km",
+    "StoreInfo": {
+      "StoreNumber": 0,
+      "StoreName": "Cockburn Central",
+      "Phone": "(08) 9411 0000",
+      "Address": "South Central, 71 Armadale Road",
+      "AddressLineTwo": "",
+      "Suburb": "Jandakot",
+      "Postcode": "6164",
+      "State": "WA",
+      "Distance": 9.720594218189369,
+      "DistanceMeasurementUnit": "km",
+      "CurrentTradingHours": {
+        "Date": "2020-04-20T00:00:00",
+        "Name": "Today",
+        "IsOpen": true,
+        "OpeningTime": "7:00am",
+        "ClosingTime": "7:00pm",
+        "WeekdayName": "Today"
+      }
+    },
+    "StockStatus": [
+      {
+        "ItemNumber": "1563497",
+        "Code": 2,
+        "Message": "Low stock",
+        "StockCount": 1
+      }
+    ],
+    "StoreAisleData": { "Success": true, "Response": "17" }
+  },
+  {
+    "StoreNumber": "2437",
+    "StoreDistance": 13.451723406742094,
+    "StoreDistanceMeasurementUnit": "km",
+    "StoreInfo": {
+      "StoreNumber": 0,
+      "StoreName": "East Victoria Park",
+      "Phone": "(08) 6250 4600",
+      "Address": "1010 Albany Highway",
+      "AddressLineTwo": "",
+      "Suburb": "East Victoria Park",
+      "Postcode": "6101",
+      "State": "WA",
+      "Distance": 13.451723406742094,
+      "DistanceMeasurementUnit": "km",
+      "CurrentTradingHours": {
+        "Date": "2020-04-20T00:00:00",
+        "Name": "Today",
+        "IsOpen": true,
+        "OpeningTime": "7:00am",
+        "ClosingTime": "7:00pm",
+        "WeekdayName": "Today"
+      }
+    },
+    "StockStatus": [
+      {
+        "ItemNumber": "1563497",
+        "Code": 1,
+        "Message": "Out of stock",
+        "StockCount": 0
+      }
+    ],
+    "StoreAisleData": { "Success": true, "Response": "21" }
+  },
+  {
+    "StoreNumber": "2260",
+    "StoreDistance": 13.745432192893025,
+    "StoreDistanceMeasurementUnit": "km",
+    "StoreInfo": {
+      "StoreNumber": 0,
+      "StoreName": "Homebase Subiaco",
+      "Phone": "(08) 9380 2600",
+      "Address": "55 Salvado Road",
+      "AddressLineTwo": "",
+      "Suburb": "Subiaco",
+      "Postcode": "6008",
+      "State": "WA",
+      "Distance": 13.745432192893025,
+      "DistanceMeasurementUnit": "km",
+      "CurrentTradingHours": {
+        "Date": "2020-04-20T00:00:00",
+        "Name": "Today",
+        "IsOpen": true,
+        "OpeningTime": "7:00am",
+        "ClosingTime": "7:00pm",
+        "WeekdayName": "Today"
+      }
+    },
+    "StockStatus": [
+      {
+        "ItemNumber": "1563497",
+        "Code": 3,
+        "Message": "In stock",
+        "StockCount": 36
+      }
+    ],
+    "StoreAisleData": { "Success": true, "Response": "11" }
+  },
+  {
+    "StoreNumber": "2016",
+    "StoreDistance": 14.14223507605389,
+    "StoreDistanceMeasurementUnit": "km",
+    "StoreInfo": {
+      "StoreNumber": 0,
+      "StoreName": "Harrisdale",
+      "Phone": "(08) 9498 9600",
+      "Address": "Cnr Wright Rd & Ranford Rd",
+      "AddressLineTwo": "",
+      "Suburb": "Harrisdale",
+      "Postcode": "6112",
+      "State": "WA",
+      "Distance": 14.14223507605389,
+      "DistanceMeasurementUnit": "km",
+      "CurrentTradingHours": {
+        "Date": "2020-04-20T00:00:00",
+        "Name": "Today",
+        "IsOpen": true,
+        "OpeningTime": "7:00am",
+        "ClosingTime": "7:00pm",
+        "WeekdayName": "Today"
+      }
+    },
+    "StockStatus": [
+      {
+        "ItemNumber": "1563497",
+        "Code": 1,
+        "Message": "Out of stock",
+        "StockCount": 0
+      }
+    ],
+    "StoreAisleData": { "Success": true, "Response": "19" }
+  },
+  {
+    "StoreNumber": "2438",
+    "StoreDistance": 14.418023138845498,
+    "StoreDistanceMeasurementUnit": "km",
+    "StoreInfo": {
+      "StoreNumber": 0,
+      "StoreName": "Cannington",
+      "Phone": "(08) 6350 5600",
+      "Address": "27 Liege Street",
+      "AddressLineTwo": "",
+      "Suburb": "Cannington",
+      "Postcode": "6107",
+      "State": "WA",
+      "Distance": 14.418023138845498,
+      "DistanceMeasurementUnit": "km",
+      "CurrentTradingHours": {
+        "Date": "2020-04-20T00:00:00",
+        "Name": "Today",
+        "IsOpen": true,
+        "OpeningTime": "7:00am",
+        "ClosingTime": "7:00pm",
+        "WeekdayName": "Today"
+      }
+    },
+    "StockStatus": [
+      {
+        "ItemNumber": "1563497",
+        "Code": 1,
+        "Message": "Out of stock",
+        "StockCount": 0
+      }
+    ],
+    "StoreAisleData": { "Success": true, "Response": "19" }
+  },
+  {
+    "StoreNumber": "2130",
+    "StoreDistance": 17.192365404302688,
+    "StoreDistanceMeasurementUnit": "km",
+    "StoreInfo": {
+      "StoreNumber": 0,
+      "StoreName": "Maddington",
+      "Phone": "(08) 9238 8200",
+      "Address": "1816-1828 Albany Highway",
+      "AddressLineTwo": "",
+      "Suburb": "Maddington",
+      "Postcode": "6109",
+      "State": "WA",
+      "Distance": 17.192365404302688,
+      "DistanceMeasurementUnit": "km",
+      "CurrentTradingHours": {
+        "Date": "2020-04-20T00:00:00",
+        "Name": "Today",
+        "IsOpen": true,
+        "OpeningTime": "7:00am",
+        "ClosingTime": "7:00pm",
+        "WeekdayName": "Today"
+      }
+    },
+    "StockStatus": [
+      {
+        "ItemNumber": "1563497",
+        "Code": 1,
+        "Message": "Out of stock",
+        "StockCount": 0
+      }
+    ],
+    "StoreAisleData": { "Success": true, "Response": "20" }
+  }
+]
