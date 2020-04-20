@@ -40,6 +40,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+// nasty stuff that needs to go in a database (maybe redis)
 app.set('stores', []);
 app.set('cache', {});
 

@@ -1,7 +1,9 @@
 var express = require('express');
 var router = express.Router();
 const fs = require('fs');
-const fetch = require('node-fetch');
+const fetch = require('node-fetch');    // must use node-fetch, fetch is something else
+
+const CACHE_RESULTS_IN_MINUTES = 5;
 
 function saveStores(req, inputData) {
     var stores = req.app.get('stores');
@@ -51,7 +53,7 @@ router.get('/',  async (req, res, next) => {
 
     var cache = req.app.get('cache');
     var item_id = req.query.item_id;
-    var store = 2206;
+    var store = 2206;   // Willetton store
 
     var url = `https://www.bunnings.com.au/api/v1/store/${store}/nearest/20/${item_id}`
 
@@ -62,13 +64,14 @@ router.get('/',  async (req, res, next) => {
         var entry = cache[url];
         if (entry.expires > now) {
             data.results = entry.data;
-            res.render('search', { title: 'Search', data: data})
+            res.render('search', { title: 'Search', message: `Cached data from ${entry.fetchTimestamp}`, data: data})
             return;
         }
     }
 
     var currentStoreUrl = `https://www.bunnings.com.au/api/v1/store/${store}/${item_id}`;
 
+    var fetchTimestamp = new Date();
     var responsePromise = fetch(url);
     var currentStoreResponsePromise = fetch(currentStoreUrl);
 
@@ -80,9 +83,11 @@ router.get('/',  async (req, res, next) => {
     var currentStoreResults = await currentStoreResponse.json();
 
     var expires = new Date();
-    expires.setMinutes(expires.getMinutes() + 5);
+    expires.setMinutes(expires.getMinutes() + CACHE_RESULTS_IN_MINUTES);
     console.log(`Time is ${now}, expiring at ${expires}`);
     map(results, data.results);
+
+    // add current store stock
     data.results.push({
         StoreNumber: currentStoreResults.StoreNumber,
         StoreName: 'Willetton',
@@ -94,6 +99,7 @@ router.get('/',  async (req, res, next) => {
     saveStores(req, results);
 
     cache[url] = {
+        fetchTimestamp: fetchTimestamp,
         expires: expires,
         data: data.results
     };
