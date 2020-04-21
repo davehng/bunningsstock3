@@ -1,7 +1,47 @@
 doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
+  title= title
+  link(rel='stylesheet' href='/assets/bootstrap/css/bootstrap.min.css')
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i')
+  link(rel='stylesheet' href='/assets/fonts/fontawesome-all.min.css')
+#wrapper
+  nav.navbar.navbar-dark.align-items-start.sidebar.sidebar-dark.accordion.bg-gradient-primary.p-0
+    .container-fluid.d-flex.flex-column.p-0
+      a.navbar-brand.d-flex.justify-content-center.align-items-center.sidebar-brand.m-0(href='#')
+        .sidebar-brand-icon
+          i.far.fa-chart-bar
+        .sidebar-brand-text.mx-3
+          span Stock Levels
+      hr.sidebar-divider.my-0
+      ul#accordionSidebar.nav.navbar-nav.text-light
+        li.nav-item(role='presentation')
+          a.nav-link.active(href='/search')
+            i.fas.fa-map-signs
+            span Bunnings Stock Search
+        li.nav-item(role='presentation')
+          a.nav-link(href='/search/stores')
+            i.fas.fa-user
+            span Bunnings Stores
+        li.nav-item(role='presentation')
+        li.nav-item(role='presentation')
+        li.nav-item(role='presentation')
+      .text-center.d-none.d-md-inline
+  #content-wrapper.d-flex.flex-column
+    #content
+      nav.navbar.navbar-light.navbar-expand.bg-white.shadow.mb-4.topbar.static-top
+        .container-fluid
+      .container-fluid
+        .d-sm-flex.justify-content-between.align-items-center.mb-4
+          h3.text-dark.mb-0= title
+        .container
+          block content
+    footer.bg-white.sticky-footer
+      .container.my-auto
+        .text-center.my-auto.copyright
+          span Copyright &copy; Dave Hng 2020
+script(src='/assets/js/jquery.min.js')
+script(src='/assets/bootstrap/js/bootstrap.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js')
+script(src='/assets/js/theme.js')

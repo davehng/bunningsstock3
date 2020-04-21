@@ -1,11 +1,10 @@
 extends layout
 
 block content
-  h1= title
   if !data
     p No stores saved
   else
-    table
+    table.table
       thead  
           tr
               th StoreNumber

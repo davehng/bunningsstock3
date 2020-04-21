@@ -37,13 +37,14 @@ function map(inputData, results) {
 }
 
 router.get('/stores', (req, res, next) => {
-    res.render('Stores', { title: '', data: req.app.get('stores') });
+    res.render('Stores', { title: 'Stores', data: req.app.get('stores') });
 });
 
 router.get('/',  async (req, res, next) => {
     var data = {
         item_id: req.query.item_id,
-        results: []
+        results: [],
+        hide_outofstock: req.query.hide_outofstock
     };
 
     if (!req.query || !req.query.item_id) {
@@ -64,7 +65,7 @@ router.get('/',  async (req, res, next) => {
         var entry = cache[url];
         if (entry.expires > now) {
             data.results = entry.data;
-            res.render('search', { title: 'Search', message: `Cached data from ${entry.fetchTimestamp}`, data: data})
+            res.render('search', { title: 'Search', message: `Cached data from ${entry.fetchTimestamp}, expires at ${entry.expires} `, data: data})
             return;
         }
     }

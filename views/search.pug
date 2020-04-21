@@ -1,24 +1,47 @@
 extends layout
 
 block content
-  h1= title
-  if data.item_id
-    p Searching for item Id: #{data.item_id}
-  if message
-    p #{message}
+  .row
+    .col
+      .card.shadow.border-left-success.py-2
+        .card-body
+          .row.align-items-center.no-gutters
+            .col.mr-2
+              span Item Number
+              form(action='/search' method='GET')
+                .form-row
+                  .col-lg-10
+                    input.form-control(name='item_id' type='text' value=data.item_id) 
+                  .col-lg-2
+                    button.btn.btn-primary(type='submit') Search
+                .form-row
+                  .col-lg-12
+                    label
+                      input(name='hide_outofstock' type='checkbox' checked='checked' value=data.hide_outofstock) 
+                      | &nbsp; Hide out of stock
+              .text-dark.font-weight-bold.h5.mb-0
   if data.results.length > 0
-    table
-        thead  
-            tr
-                th Store
-                th Status
-                th Aisle
-                th Stock Count
-        tbody
-            each val in data.results
+    .row
+      .col
+        .card.border-left-success.py-2
+          .card-body
+            h4.card-title Results
+            p.card-text
+            if message
+              p #{message}
+            table.table
+              thead  
                 tr
-                    td= val.StoreName
-                    td= val.Status
-                    td= val.Aisle
-                    td= val.StockCount
+                  th Store
+                  th Status
+                  th Aisle
+                  th Stock Count
+              tbody
+                each val in data.results
+                  if !(data.hide_outofstock && val.StockCount == 0)
+                    tr
+                      td= val.StoreName
+                      td= val.Status
+                      td= val.Aisle
+                      td= val.StockCount
 
