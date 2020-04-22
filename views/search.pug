@@ -10,10 +10,9 @@ block content
               span Item Number
               form(action='/search' method='GET')
                 .form-row
-                  .col-lg-10
+                  .col-lg-12
                     input.form-control(name='item_id' type='text' value=data.item_id) 
-                  .col-lg-2
-                    button.btn.btn-primary(type='submit') Search
+                    button.btn.btn-primary(type='submit').float-right Search
                 .form-row
                   .col-lg-12
                     label
