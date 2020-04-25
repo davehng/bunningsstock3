@@ -24,8 +24,21 @@ block content
       .col
         .card.border-left-success.py-2
           .card-body
-            h4.card-title Results
+            h4.card-title Product
             p.card-text
+            if (data.item_data)
+              .row
+                .col-lg-6
+                  ul
+                    li= data.item_data.name
+                    li= data.item_data.brand
+                .col-lg-6
+                  img(src=data.item_data.image)
+    .row
+      .col
+        .card.border-left-success.py-2
+          .card-body
+            h4.card-title Search Results
             if message
               p #{message}
             table.table
@@ -43,4 +56,19 @@ block content
                       td= val.Status
                       td= val.Aisle
                       td= val.StockCount
+  else
+    table.table
+      thead
+        tr
+          th Common Searches
+        tbody
+          tr
+            td
+              a(href='/search?item_id=1560214') Diggers Violet Meths 1L
+          tr
+            td
+              a(href='/search?item_id=1565766') Diggers Meths 4L
+          tr
+            td
+              a(href='/search?item_id=1563497') Diggers Meths 20L
 

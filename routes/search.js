@@ -36,15 +36,59 @@ function map(inputData, results) {
     });
 }
 
+function getTimestampIn(minutes) {
+    var expires = new Date();
+    expires.setMinutes(expires.getMinutes() + minutes);
+
+    return expires;
+}
+
 router.get('/stores', (req, res, next) => {
     res.render('Stores', { title: 'Stores', data: req.app.get('stores') });
 });
 
 router.get('/',  async (req, res, next) => {
+    async function getItemData(item_id) {
+        var itemCache = req.app.get('item_cache');
+        var itemUrl = `https://www.bunnings.com.au/api/websearch/v1/PRODUCTS/AU/WAMetro?page=1&q=${item_id}`;
+        var fetchTimestamp = new Date();
+        var expires = getTimestampIn(CACHE_RESULTS_IN_MINUTES);
+
+        if (itemCache[itemUrl]) {
+            var entry = itemCache[itemUrl];
+            if (entry.expires > itemFetchTimestamp) {
+                return entry.data;
+            }
+        }
+
+        var responsePromise = fetch(itemUrl);
+        var response = await responsePromise;
+        var json = await response.json();
+
+        var data = {};
+
+        if (json.results.length > 0) {
+            data = {
+                name: json.results[0].displayName,
+                brand: json.results[0].brandName,
+                image: json.results[0].productImage
+            }
+
+            itemCache[url] = {
+                fetchTimestamp: fetchTimestamp,
+                expires: expires,
+                data: data
+            };
+        }
+
+        return data;
+    }
+
     var data = {
         item_id: req.query.item_id,
         results: [],
-        hide_outofstock: req.query.hide_outofstock
+        hide_outofstock: req.query.hide_outofstock,
+        item_data: {}
     };
 
     if (!req.query || !req.query.item_id) {
@@ -52,11 +96,15 @@ router.get('/',  async (req, res, next) => {
         return;
     }
 
+    data.item_data = await getItemData(req.query.item_id);
+
+    console.log(JSON.stringify(data.item_data));
+
     var cache = req.app.get('cache');
     var item_id = req.query.item_id;
     var store = 2206;   // Willetton store
 
-    var url = `https://www.bunnings.com.au/api/v1/store/${store}/nearest/20/${item_id}`
+    var url = `https://www.bunnings.com.au/api/v1/store/${store}/nearest/5/${item_id}`
 
     var now = new Date();
     var results = null;
@@ -83,8 +131,7 @@ router.get('/',  async (req, res, next) => {
     results = await response.json();
     var currentStoreResults = await currentStoreResponse.json();
 
-    var expires = new Date();
-    expires.setMinutes(expires.getMinutes() + CACHE_RESULTS_IN_MINUTES);
+    var expires = getTimestampIn(CACHE_RESULTS_IN_MINUTES);
     console.log(`Time is ${now}, expiring at ${expires}`);
     map(results, data.results);
 
